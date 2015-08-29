@@ -11,3 +11,6 @@ configurations (TLS 1.0, no-PFS, RC4, etc.).
 The goal as that by collecting data on people's actual usage, they will be
 better informed about which websites to complain to because they don't value our
 privacy.
+
+At present this is not available in the Chrome Store, you have to clone this
+repo, enable developer mode, and install it yourself.
