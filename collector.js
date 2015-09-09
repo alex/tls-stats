@@ -1,6 +1,10 @@
 chrome.webRequest.onBeforeSendHeaders.addListener(
     function(info) {
         var url = new URL(info.url);
+        // Don't care about localhost
+        if (url.hostname == "localhost") {
+            return;
+        }
         if (url.protocol == "http:") {
             var key = "http:" + url.hostname;
             chrome.storage.local.get(key, function(values) {
