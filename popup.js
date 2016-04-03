@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     chrome.storage.local.get(null, function(values) {
         var html = "";
         var data = sortByValue(values);
-        for (var value in data.values.slice(0, 20)) {
+        for (var value in data.values.slice(0, 25)) {
             var val = data.values[value];
             html += "<tr><td>" + val[0].slice(5) + "</td><td>" +
                 val[1] + "</td><td>" + Math.round(100 * val[1] / data.total) +
