@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var data = sortByValue(values);
         for (var value in data.values.slice(0, 25)) {
             var val = data.values[value];
-            html += "<tr><td>" + val[0].slice(5) + "</td><td>" +
+            html += "<tr><td><code>" + val[0].slice(5) + "</code></td><td>" +
                 val[1] + "</td><td>" + Math.round(100 * val[1] / data.total) +
                 "%</td></tr>";
         }

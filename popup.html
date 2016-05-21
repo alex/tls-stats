@@ -2,17 +2,18 @@
 <html>
     <head>
         <title>TLS Stats</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="popup.css" />
     </head>
     <body>
         <h1>Top 25 worst HTTP offenders</h1>
         <div>
-            <table>
+            <table class="table table-striped table-condensed">
                 <thead>
                     <tr>
                         <th>Host</th>
                         <th>Request count</th>
-                        <th>Percentage of total HTTP requests</th>
+                        <th>Percentage of all HTTP requests</th>
                     </tr>
                 </thead>
                 <tbody id="stats-body">

@@ -14,6 +14,8 @@
         "default_popup": "popup.html"
     },
 
+    "content_security_policy": "script-src 'self'; object-src 'self'; style-src 'self' https://maxcdn.bootstrapcdn.com;",
+
     "permissions": [
         "storage",
         "unlimitedStorage",
