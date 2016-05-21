@@ -25,7 +25,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
             var key = "http:" + url.hostname;
             chrome.storage.local.get(key, function(values) {
                 var data = {};
-                data[key] =  (values[key] || 0) + 1
+                data[key] = (values[key] || 0) + 1
                 chrome.storage.local.set(data);
             });
         }
