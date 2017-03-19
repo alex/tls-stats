@@ -22,10 +22,17 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
                     });
                 });
             }
-            var key = "http:" + url.hostname;
-            chrome.storage.local.get(key, function(values) {
+            var httpKey = "http:" + url.hostname;
+            var lastSeenKey = "last-seen:" + url.hostname;
+            chrome.storage.local.get(httpKey, function(values) {
                 var data = {};
-                data[key] = (values[key] || 0) + 1
+                data[httpKey] = (values[httpKey] || 0) + 1
+                chrome.storage.local.set(data);
+
+                var data = {};
+                var lastSeen = new Date();
+                data[lastSeenKey] = ((lastSeen.getMonth() + 1) + "/" +
+                    (lastSeen.getDate()) + "/" + lastSeen.getFullYear());
                 chrome.storage.local.set(data);
             });
         }
