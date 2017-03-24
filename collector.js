@@ -8,8 +8,8 @@ chrome.tabs.onCreated.addListener(function(tab) {
 chrome.webRequest.onBeforeSendHeaders.addListener(
     function(info) {
         var url = new URL(info.url);
-        // Don't care about localhost
-        if (url.hostname == "localhost") {
+        // Don't care about localhost or example.com
+        if (url.hostname === "localhost" || url.hostname === "example.com") {
             return;
         }
         if (url.protocol == "http:") {
