@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
             var lastSeen = (values["last-seen:" + host] || "");
             html += "<tr><td><code>" + host + "</code></td><td>" +
                 val[1].toLocaleString() + "</td><td>" +
-                Math.round(100 * val[1] / data.total) + "%</td><td>" +
-                lastSeen + "</td></tr>";
+                (Math.round(10 * 100 * val[1] / data.total) / 10) + "%</td>" +
+                "<td>" + lastSeen + "</td></tr>";
         }
         document.getElementById("stats-body").innerHTML = html;
     });
