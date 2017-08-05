@@ -17,4 +17,4 @@ privacy.
 At present this is not available in the Chrome Store, you have to clone this
 repo, enable developer mode, and install it yourself.
 
-.. _`hopefully will be addressed`: https://codereview.chromium.org/2156763003/
+.. _`hopefully will be addressed`: https://github.com/EFForg/webrequest-tlsinfo-api/
